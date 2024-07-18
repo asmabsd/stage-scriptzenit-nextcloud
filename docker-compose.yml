@@ -1,0 +1,41 @@
+
+
+services:
+  database:
+    image: mariadb:10.5  # Utilisation de l'image MariaDB
+    container_name: nextcloud-db
+    restart: always
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_PASSWORD: nextcloud_password
+    networks:
+      - nextcloud-network
+
+  app:
+    image: nextcloud:latest
+    container_name: nextcloud-app
+    ports:
+      - 8081:80
+    volumes:
+      - nextcloud_data:/var/www/html
+    environment:
+      MYSQL_PASSWORD: nextcloud_password
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_HOST: database
+    depends_on:
+      - database
+    networks:
+      - nextcloud-network
+
+volumes:
+  db_data:
+  nextcloud_data:
+
+networks:
+  nextcloud-network:
+    external: true
