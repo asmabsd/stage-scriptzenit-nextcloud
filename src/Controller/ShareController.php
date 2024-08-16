@@ -17,7 +17,7 @@ class ShareController extends AbstractController
     {
         $httpClient = HttpClient::create();
 
-        $url = 'http://127.0.0.1:8081/ocs/v1.php/apps/files_sharing/api/v1/shares';
+        $url = 'https://crmt.scriptzenit.fr/ocs/v1.php/apps/files_sharing/api/v1/shares';
         $response = $httpClient->request('POST', $url, [
             'headers' => [
                 'OCS-APIREQUEST' => 'true',

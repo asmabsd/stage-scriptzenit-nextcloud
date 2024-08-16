@@ -18,7 +18,7 @@ class MyController extends AbstractController
     public function nextcloudLogin(): RedirectResponse
     {
         // Redirige vers la page de connexion Nextcloud
-        $nextcloudUrl = 'http://127.0.0.1:8081';
+        $nextcloudUrl = 'https://crmt.scriptzenit.fr';
         return $this->redirect($nextcloudUrl);
     }
 

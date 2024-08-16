@@ -21,7 +21,7 @@ class CalendarController extends AbstractController
     public function viewCalendar(): Response
     {
         
-        $url = 'http://127.0.0.1:8081/apps/calendar/dayGridMonth/now';
+        $url = 'https://crmt.scriptzenit.fr/apps/calendar/dayGridMonth/now';
 
         
         return $this->redirect($url);

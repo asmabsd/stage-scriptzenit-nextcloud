@@ -13,7 +13,7 @@ class FileController extends AbstractController
     {
         // Configuration du client WebDAV
         $client = new Client([
-            'baseUri' => 'http://127.0.0.1:8081/remote.php/dav/',
+            'baseUri' => 'https://crmt.scriptzenit.fr/remote.php/dav/',
             'userName' => 'admin',   // Remplacez par le nom d'utilisateur Nextcloud
             'password' => 'sciptzenit123',   // Remplacez par le mot de passe Nextcloud
         ]);
