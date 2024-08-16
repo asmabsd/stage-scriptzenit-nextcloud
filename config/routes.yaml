@@ -1,3 +1,21 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+controllers:
+    resource: '../src/Controller/'
+    type: annotation
+
+index:
+    path: /
+    controller: App\Controller\DefaultController::index
+
+nextcloud_login:
+    path: /nextcloud-login
+    controller: App\Controller\NextcloudController::nextcloudLogin
+share_file:
+    path: /share-file
+    controller: App\Controller\ShareController::shareFile
+
+calendar_view:
+    path: /calendar-view
+    controller: App\Controller\CalendarController::viewCalendar

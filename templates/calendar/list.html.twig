@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calendars</title>
+</head>
+<body>
+    <h1>Calendars</h1>
+    <ul>
+        {% for calendar in calendars %}
+            <li>
+                <a href="{{ path('list_events', { path: calendar.path }) }}">
+                    {{ calendar.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

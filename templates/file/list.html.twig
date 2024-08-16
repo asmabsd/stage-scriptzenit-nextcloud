@@ -1,14 +1,10 @@
-{# templates/file/list.html.twig #}
-
 {% extends 'base.html.twig' %}
-
-{% block title %}Liste des Fichiers{% endblock %}
-
+{# list.html.twig #}
 {% block body %}
     <h1>Liste des Fichiers</h1>
     <ul>
         {% for file in files %}
-            <li>{{ file }}</li>
+            <li>{{ file['{DAV:}displayname'] }}</li>
         {% endfor %}
     </ul>
 {% endblock %}
