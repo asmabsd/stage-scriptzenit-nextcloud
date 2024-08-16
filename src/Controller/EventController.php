@@ -31,7 +31,7 @@ class EventController extends AbstractController
 
         // Construire l'URL pour créer un nouvel événement dans Nextcloud
         $url = sprintf(
-            'http://127.0.0.1:8081/apps/calendar/listMonth/now/new/sidebar/0/%d/%d',
+            'https://crmt.scriptzenit.fr/apps/calendar/listMonth/now/new/sidebar/0/%d/%d',
             $startTimestamp,
             $endTimestamp
         );

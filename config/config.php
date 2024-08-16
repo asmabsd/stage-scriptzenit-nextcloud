@@ -6,7 +6,7 @@ $CONFIG = array (
 
   'trusted_domains' => 
 array (
-  0   =>  'localhost', 
+  0   =>  'scriptzenit.fr', 
   1 => 'crmt.scriptzenit.fr',
   2 => '172.27.48.1',
   3 => '255.255.240.0',
